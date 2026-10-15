@@ -1,0 +1,147 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Полупрозрачная сплошная полоса вверху */
+window#waybar {
+    background: rgba(17, 17, 27, 0.85);
+    color: #cdd6f4;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Базовые стили модулей */
+#workspaces,
+#window,
+#mpris,
+#clock,
+#cpu,
+#temperature,
+#memory,
+#disk,
+#pulseaudio,
+#network,
+#battery,
+#language,
+#tray {
+    background: transparent;
+    color: #cdd6f4;
+    padding: 0px 8px;
+    margin: 0px;
+}
+
+/* Воркспейсы */
+#workspaces {
+    background: rgba(24, 24, 37, 0.6);
+    padding: 0px 4px;
+}
+
+#workspaces button {
+    color: #6c7086;
+    background: transparent;
+    padding: 0 7px;
+    margin: 0px;
+    border-radius: 0px;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button.active {
+    background: #cba6f7;
+    color: #11111b;
+}
+
+#workspaces button:hover {
+    background: rgba(49, 50, 68, 0.8);
+    color: #cdd6f4;
+}
+
+#workspaces button.occupied {
+    color: #a6e3a1;
+}
+
+/* Активное окно */
+#window {
+    color: #89b4fa;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+/* Плеер */
+#mpris {
+    color: #f9e2af;
+    background: rgba(24, 24, 37, 0.6);
+    padding: 0 10px;
+}
+
+/* Часы */
+#clock {
+    color: #fab387;
+    background: rgba(24, 24, 37, 0.6);
+    padding: 0 10px;
+}
+
+/* Системные показатели */
+#cpu {
+    color: #f38ba8;
+}
+
+#temperature {
+    color: #fab387;
+}
+
+#temperature.critical {
+    color: #eba0ac;
+    background: rgba(235, 160, 172, 0.2);
+}
+
+#memory {
+    color: #a6e3a1;
+}
+
+#disk {
+    color: #94e2d5;
+}
+
+#network {
+    color: #89b4fa;
+}
+
+#pulseaudio {
+    color: #eba0ac;
+}
+
+#pulseaudio.muted {
+    color: #6c7086;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.warning:not(.charging) {
+    color: #fab387;
+}
+
+#battery.critical:not(.charging) {
+    color: #f38ba8;
+}
+
+/* Раскладка клавиатуры справа */
+#language {
+    color: #fab387;
+    background: rgba(24, 24, 37, 0.4);
+    padding: 0 8px;
+}
+
+/* Трей */
+#tray {
+    background: rgba(24, 24, 37, 0.6);
+    padding: 0px 8px;
+}
